@@ -13,9 +13,9 @@
    * [Environment](#environment)
 * [Future Prospects](#FutureProspects)
 ## About
- * Users can register from the comforts of their home.
- * User will not have to fill any form after reaching vaccination centre.
- * They will get reminder text message if they did not reach the centre at their slot timings.
+* Users can register from the comforts of their home.
+* Users will not have to fill any form after reaching the vaccination center.
+* They will get a reminder text message if they did not reach the center at their slot timings.
 ## Idea
  Attendance will be taken by face recognition after reaching vaccination centre.
 ## Technology
