@@ -28,7 +28,7 @@ def register(request):
 
     print(message.sid)
 
-    return render(request, "register.html")
+    return render(request, "final.html")
 
 
 def home(request):
@@ -41,7 +41,7 @@ def upload_image(request):
 
     user = User(pic=p)
     user.save()
-    return render(request, "register.html")
+    return render(request, "final.html")
 
 def attendance(request):
     import cv2
