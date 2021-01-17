@@ -1,18 +1,54 @@
 from django.shortcuts import render
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
-
+from twilio.rest import Client
+import os
+import cv2
+import numpy as np
+import face_recognition
+import os
+from datetime import datetime
 
 # Create your views here.
 def register(request):
-    # return HttpResponse('Hey!!')
+    # # return HttpResponse('Hey!!')
     if request.method == "POST":
         name = request.POST['Name']
         number = request.POST['number']
         print(name)
         print(number)
-    from twilio.rest import Client
-    import os
+    #
+    # # Your Account Sid and Auth Token from twilio.com/console
+    # # and set the environment variables. See http://twil.io/secure
+    # account_sid = os.environ['TWILIO_ACCOUNT_SID']
+    # auth_token = os.environ['TWILIO_AUTH_TOKEN']
+    # client = Client(account_sid, auth_token)
+    # message = client.messages \
+    #     .create(
+    #     body="Hey! You are registered for vaccination..",
+    #     from_='+14342904181',
+    #     to='+919205201181'
+    # )
+    #
+    # print(message.sid)
+
+    return render(request, "register.html")
+
+
+def home(request):
+    return render(request, "homepage.html")
+
+def final(request):
+    return render(request, "final.html")
+
+def upload_image(request):
+
+
+    # if request.method == "POST":
+    # name = request.POST['Name']
+    #     number = request.POST['number']
+    #     print(name)
+    #     print(number)
 
     # Your Account Sid and Auth Token from twilio.com/console
     # and set the environment variables. See http://twil.io/secure
@@ -21,21 +57,13 @@ def register(request):
     client = Client(account_sid, auth_token)
     message = client.messages \
         .create(
-        body="Hey!"+name+ "You are registered for vaccination..",
+        body="Hey! You are registered for vaccination..",
         from_='+14342904181',
-        to='+919205201181 , +917404349242'
+        to='+919205201181'
     )
 
     print(message.sid)
 
-    return render(request, "final.html")
-
-
-def home(request):
-    return render(request, "homepage.html")
-
-
-def upload_image(request):
     p = request.FILES['image']
     from .models import User
 
@@ -44,12 +72,6 @@ def upload_image(request):
     return render(request, "final.html")
 
 def attendance(request):
-    import cv2
-    import numpy as np
-    import face_recognition
-    import os
-    from datetime import datetime
-
     # from PIL import ImageGrab
 
     path = 'imagesAttendance/profiles'

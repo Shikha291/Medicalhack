@@ -24,8 +24,9 @@ position: center;
 </head>
 <body>
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><center>
-    <form method="post" action="{% url 'attendance' %}">{% csrf_token %}
-    <input type="button" value=" MARK ATTENDANCE">
+{#    <form method="post" action="{% url 'attendance' %}">{% csrf_token %}#}
+    <form method="post" action="/attendance/">{% csrf_token %}
+        <input type="button" value=" MARK ATTENDANCE">
     </form>
     </center>
 </body>

@@ -124,4 +124,4 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
-MEDIA_ROOT = "C:\\Users\Shikha Gupta\\PycharmProjects\\djangoProject\\medicalproject2\\imagesAttendance"
+MEDIA_ROOT = "C:\\Users\\Dell\\OneDrive\\Desktop\\2019-2023\\Medicalhack\\imagesAttendance"

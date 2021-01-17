@@ -16,14 +16,16 @@
 <input class="a" type="tel" name="number" required>
 <p> <b> Upload your photo: </b></p>
 <b>(Name of the file should be in format YourFullName.png/jpg)</b><br>
-
-
-<form method="post" enctype="multipart/form-data" action='upload'>
-    {% csrf_token %}
-    <input type="file" name="image"><br><br>
-    <input type="submit" value="Register">
-    </form>
+    <a href="{% url 'final' %}"><input type="submit" value="Register"></a>
 </form>
+
+<form method="post" enctype="multipart/form-data" action="upload/">{% csrf_token %}
+{#    <a href="http://127.0.0.1:8000/medicalapp/final/"><input type="submit" value="Register"></a>#}
+    <input type="file" name="image"><br><br>
+    <input type="submit" value="Upload">
+
+</form>
+
 </center>
 </body>
 </html>
