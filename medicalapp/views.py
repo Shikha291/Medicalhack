@@ -41,6 +41,9 @@ def home(request):
 def final(request):
     return render(request, "final.html")
 
+def attendance_page(request):
+    return render(request, "mark attendance.html")
+
 def upload_image(request):
 
 
@@ -57,7 +60,7 @@ def upload_image(request):
     client = Client(account_sid, auth_token)
     message = client.messages \
         .create(
-        body="Hey! You are registered for vaccination..",
+        body="Hey! You are registered for vaccination...\nYou will be notified about date and time of vaccination",
         from_='+14342904181',
         to='+919205201181'
     )
