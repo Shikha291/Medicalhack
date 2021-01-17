@@ -1,0 +1,38 @@
+
+body{
+  background-image: url("https://png.pngtree.com/thumb_back/fh260/back_our/20190619/ourmid/pngtree-hospital-display-board-background-material-image_141087.jpg");
+  background-size: cover;
+  font-family: 'Cookie', cursive;
+  text-align: center;
+}
+h1{
+font-size: 40px;
+color: #0B615E;
+}
+input[type=submit]{
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+color: blue;
+ padding: 15px 32px;
+ text-align: center;
+ display: inline-block;
+ font-size: 20px;
+ margin: 4px 2px;
+ cursor: pointer;
+position: center;
+}
+.a{
+color: red;
+ padding: 5px 15px;
+ text-align: center;
+ display: inline-block;
+ font-size: 20px;
+ margin: 2px 2px;
+ cursor: pointer;
+}
+p{
+font-size: 30px;
+}
+
+
+
+

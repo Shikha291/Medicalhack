@@ -1,0 +1,29 @@
+<html>
+<head>
+<title> Register </title>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{%static 'register.css' %}">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+</head>
+<body>
+<br><br><h1><b><u> Registration </u></b> </h1>
+
+<form method="post" action="{% url 'register' %}">{% csrf_token %}
+<p><b>Please enter your Full Name:</b></p>
+<input class="a" type="text" value="Kriti Singh" name="Name" required>
+<p><b>Enter your mobile number:</b></p>
+<input class="a" type="tel" name="number" required>
+<p> <b> Upload your photo: </b></p>
+<b>(Name of the file should be in format YourFullName.png/jpg)</b><br>
+
+
+<form method="post" enctype="multipart/form-data" action='upload'>
+    {% csrf_token %}
+    <input type="file" name="image"><br><br>
+    <input type="submit" value="Register">
+    </form>
+</form>
+</center>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>
+Mark attendance </title>
+<style>
+body{
+  background-image: url("https://static.vecteezy.com/system/resources/previews/000/092/053/original/vector-comic-style-background-illustration.jpg");
+  background-size: cover;
+
+
+}
+input{
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+color: blue;
+ padding: 30px 40px;
+ text-align: center;
+ display: inline-block;
+ font-size: 20px;
+ margin: 4px 2px;
+ cursor: pointer;
+position: center;
+}
+</style>
+</head>
+<body>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><center>
+    <form method="post" action="{% url 'attendance' %}">{% csrf_token %}
+    <input type="button" value=" MARK ATTENDANCE">
+    </form>
+    </center>
+</body>
+</html>
