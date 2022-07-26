@@ -25,5 +25,5 @@
     * HTML/CSS
  ### Environment
     * Pycharm (Django framework)
-## FutureProspects
+## Future Prospects
  * Adding maps into the project
